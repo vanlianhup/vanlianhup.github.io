@@ -1,705 +1,488 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Van Lian Hup</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.jpeg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7R5W39DH1"></script>  
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-N7R5W39DH1');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Lian Hup @ Peter - Product Manager Portfolio</title>
+    <meta name="description" content="Portfolio of Van Lian Hup @ Pete, an experienced Project and Product Manager.">
     
-  </script>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
 
-  <!--- TO OPEN in new Page-->
-  <base target="_blank" />
- 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable manual dark mode toggling
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Navy Blue
+                        secondary: '#3b82f6', // Bright Blue
+                        dark: '#111827',
+                        light: '#f3f4f6',
+                        accent: '#8b5cf6', // Purple
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for Chrome/Safari/Edge */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Focus styles for contenteditable elements */
+        [contenteditable="true"]:focus {
+            outline: 2px dashed #3b82f6;
+            background-color: rgba(59, 130, 246, 0.05);
+            border-radius: 4px;
+            padding: 4px;
+        }
+        [contenteditable="true"]:hover {
+            cursor: text;
+        }
+
+        /* Typography */
+        .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1em; margin-bottom: 0.5em; color: #1e3a8a; }
+        .dark .prose h3 { color: #60a5fa; }
+        .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+        .prose li { margin-bottom: 0.25em; }
+        .prose p { margin-bottom: 1em; }
+        .prose strong { color: #111827; font-weight: 600; }
+        .dark .prose strong { color: #f3f4f6; }
+    </style>
+    <!-- Theme Check Script (Prevents flash of wrong theme) -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
+<body class="font-sans text-gray-800 bg-white antialiased dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300 border-b border-transparent dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary dark:text-blue-400 tracking-tight">VLH<span class="text-secondary">.</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white font-medium transition">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white font-medium transition">Experience</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white font-medium transition">Projects</a>
+                    
+                    <!-- Theme Toggle Button (Desktop) -->
+                    <button id="theme-toggle" onclick="toggleTheme()" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-yellow-400 focus:outline-none transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  d-flex justify-content-center align-items-center header-transparent">
+                    <a href="https://www.linkedin.com/in/vanlianhup" target="_blank" class="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-500 transition shadow-lg shadow-blue-900/20">
+                        <i class="fab fa-linkedin mr-2"></i> Connect
+                    </a>
+                </div>
 
-    <nav class="nav-menu d-none d-lg-block">
-      <ul>
-        <!-- <li class="active"><a href="">Home</a></li>  --index.html-->
-        <li><a href="#about">About</a></li>
-        <!-- ======= <li><a href="#resume">Resume</a></li> ======= -->
-        <li><a href="#services">Services</a></li>
-        <!-- =======<li><a href="#portfolio">Portfolio</a></li> ======= -->
-        <li><a href="#contact">Contact</a></li>
+                <!-- Mobile Menu Button & Theme Toggle -->
+                <div class="md:hidden flex items-center space-x-4">
+                     <!-- Theme Toggle Button (Mobile) -->
+                     <button onclick="toggleTheme()" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-yellow-400 focus:outline-none transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
 
-      </ul>
-    </nav><!-- .nav-menu -->
-
-  </header><!-- End Header -->
-  
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <h1>Van Lian Hup @ Peter</h1>
-      <h2>A Professional Project/Product Manger & Scrum Master</h2>
-      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Me Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <span>About Me</span>
-          <h2>About Me</h2>
-          <p>Experienced Project/Product Manager with a demonstrated history of working in the software & banking industry. 
-            Skilled in System Design & Deployment, Systems Management, Management Information Systems (MIS). 
-            Strong engineering professional with a Master's degree focused on Master of Business Administration in Management Information Systems from Hannam University.</p>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="row">
-          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-          <div class="col-lg-8 d-flex flex-column align-items-stretch">
-            <div class="content pl-lg-4 d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="icofont-rounded-right"></i> <strong>Name:</strong> Van Lian Hup</li>
-                    <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.vanlianhup.github.io</li>
-                    <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +95 9 899444101</li>
-                    <li><i class="icofont-rounded-right"></i> <strong>City:</strong> City : Yangon, Myanmar</li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> Ask Me :) </li> 
-                    <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> MBA in MIS</li>
-                    <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> vanlianhup@gmail.com</li>
-                    <!-- <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li> -->
-                  </ul>
-                </div>
-              </div>
-              <div class="row mt-n4">
-                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="icofont-simple-smile" style="color: #20b38e;"></i>
-                    <span data-toggle="counter-up">65</span>
-                    <p><strong>Happy Clients</strong> Over all 60+ happy clients.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="icofont-document-folder" style="color: #8a1ac2;"></i>
-                    <span data-toggle="counter-up">85</span>
-                    <p><strong>Projects</strong> Over 80+ projects sucessfully Deployment.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="icofont-clock-time" style="color: #2cbdee;"></i>
-                    <span data-toggle="counter-up">10</span>
-                    <p><strong>Years of experience</strong> 10+ years work experience in software & banking industry.</p>
-                  </div>
-                </div>
-
-                <!-- <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="icofont-award" style="color: #ffb459;"></i>
-                    <span data-toggle="counter-up">15</span>
-                    <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
-                  </div>
-                </div> -->
-              </div>
-            </div><!-- End .content-->
-
-            <div class="skills-content pl-lg-4">
-              <div class="progress">
-                <span class="skill">Project Management <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">System Analysis and Design <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Business process re-engineering <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</a>
+                <a href="#experience" class="block px-3 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Experience</a>
+                <a href="#projects" class="block px-3 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Projects</a>
+                <a href="https://www.linkedin.com/in/vanlianhup" target="_blank" class="block mt-4 text-center bg-primary text-white px-3 py-3 rounded-md font-medium hover:bg-blue-800">
+                    Connect on LinkedIn
+                </a>
             </div>
-
-          </div>
         </div>
+    </nav>
 
-      </div>
-    </section><!-- End About Me Section -->
-
-    <!-- ======= My Resume Section ======= -->
-    <!-- =======
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <span>My Resume</span>
-          <h2>My Resume</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Alice Barkley</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-              </p>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Light Mode Background -->
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.blue.50),white)] dark:hidden"></div>
+        <!-- Dark Mode Background -->
+        <div class="absolute inset-0 -z-10 hidden dark:block bg-[radial-gradient(45rem_50rem_at_top,theme(colors.blue.900),theme(colors.gray.900))] opacity-40"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-primary dark:text-blue-300 font-semibold text-sm tracking-wide uppercase">
+                PSM | Project/Product Manager
             </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End My Resume Section -->
-    
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Services</span>
-          <h2>Services</h2>
-          <p>If you need or required one of the folliwng services, dont hesitate to contact me!</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">CMS Development</a></h4>
-              <!--  
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              -->
-              </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Consultation Service</a></h4>
-              <!--  
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              -->
-              </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Online Marketing</a></h4>
-              <!--  
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              -->
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Domain & Hosting</a></h4>
-              <!--  
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              -->
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-
-        <div class="owl-carousel testimonials-carousel">
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Van Lian Hup is courteous and very helpful. His team helped me with our project within the agreed timeline. I had a problem with timeline and scope, but they took care of it right away.              
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            <h1 class="text-4xl md:text-6xl font-bold text-dark dark:text-white mb-6 tracking-tight leading-tight">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary dark:from-blue-400 dark:to-blue-200">Van Lian Hup @ Peter </span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" contenteditable="true">
+                Senior Product Manager working in software and banking industries. Expert in System Design & Deployment and Scrum.
             </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              When I realized I had a problem with the client regarding project scope & timeline, it was out of control. I needed a facilitator immediately. Van Lian Hup helped solve it right away — I would definitely recommend him.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Very patience and perfessional to work with. He is very serious regarding project scope & timeline. 
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              It is very great and happy to work with Van Lian Hup for freelance projects. 
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <!--
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-          -->
-
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#experience" class="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-800 transition shadow-xl shadow-blue-900/20 flex items-center justify-center">
+                    View Experience
+                </a>
+            </div>
         </div>
+    </section>
 
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= My Portfolio Section ======= -->
-    <!-- =======
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <span>My Portfolio</span>
-          <h2>My Portfolio</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <ul id="portfolio-flters" class="d-flex justify-content-center">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
-        </ul>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End My Portfolio Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <!-- =======
-    <section id="pricing" class="pricing">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Pricing</span>
-          <h2>Pricing</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <span>Contact</span>
-          <h2>Contact</h2>
-          <p>You want to drop a query or comment, dont hesitate to contact me!</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-12">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
-                  <i class="bx bx-share-alt"></i>
-                  <h3>Social Profiles</h3>
-                  <div class="social-links">
-                    <a href="https://twitter.com/vanlianhup" class="twitter"><i class="icofont-twitter"></i></a>
-                    <a href="https://www.facebook.com/vanlianhup/" class="facebook"><i class="icofont-facebook"></i></a>
-                    <a href="https://www.instagram.com/peter_lyan/" class="instagram"><i class="icofont-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/vanlianhup/" class="linkedin"><i class="icofont-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Me</h3>
-                  <p>vanlianhup@gmail.com</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Me</h3>
-                  <p>+66 902529885</p>
-               </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- Half Col disabled
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="vanlianhup"><a class="LI-simple-link" href='https://mm.linkedin.com/in/vanlianhup?trk=profile-badge'>Van Lian Hup</a></div>
-                </div>
-              </div>
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                  <div class="form-row">
-                    <div class="col-md-6 form-group">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                      <div class="validate"></div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark dark:text-white mb-6">About Me</h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg mb-6 leading-relaxed outline-none" id="about-text" contenteditable="true">
+                        As an experienced Project/Product Manager, I have worked in the software and banking industries. My skills include System Design & Deployment, Project/Product Management, and Scrum Master. I have a Master's in Business Administration focusing on Management Information Systems from Hannam University.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-4xl font-bold text-secondary mb-2" contenteditable="true">8+</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Years Experience</p>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-bold text-secondary mb-2" contenteditable="true">PSM</h4>
+                            <p class="text-gray-500 dark:text-gray-400">Certified Scrum Master</p>
+                        </div>
                     </div>
-                    <div class="col-md-6 form-group">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                      <div class="validate"></div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center relative">
+                    <!-- Decorative element -->
+                    <!-- <div class="absolute inset-0 bg-blue-100 rounded-full filter blur-3xl opacity-50 transform translate-x-4 translate-y-4"></div> -->
+                    <!-- Placeholder for profile image -->
+                    <div class="relative w-72 h-72 md:w-96 md:h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center text-gray-400">
+                        <!-- <div class="text-center p-6">
+                            <i class="fas fa-user-circle text-6xl mb-4"></i>
+                            <p class="text-sm">Replace with your photo<br>(img src="your link")</p>
+                        </div> --> 
+                        <img src="./assets/img/vanlianhup.jpg" alt="Van Lian Hup" class="w-full h-full object-cover">
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" rows="6" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validate"></div>
-                  </div>
-                  <div class="mb-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-                  <div class="text-center"><button type="submit">Send Message</button></div>
-                </form>
-              
+                </div>
             </div>
-          -->
         </div>
+    </section>
 
-      </div>
-    </section><!-- End Contact Me Section -->
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-light dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark dark:text-white mb-4">Professional Experience</h2>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tip: Click on any text below to paste your details directly.</p>
+            </div>
 
-  </main><!-- End #main -->
+            <div class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-4 md:ml-0 space-y-12" id="experience-list">
+                
+                <!-- Job 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary dark:bg-blue-500 border-4 border-white dark:border-gray-800 shadow-sm"></div>
+                    <div class="md:flex items-start justify-between group">
+                        <div class="md:w-1/3 mb-2 md:mb-0 md:pr-8 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-300 text-sm font-semibold rounded-full mb-2" contenteditable="true">May 2024 - Present</span>
+                            <h3 class="text-xl font-bold text-dark dark:text-white" contenteditable="true">Senior Product Manager</h3>
+                            <p class="text-gray-500 dark:text-gray-400 font-medium" contenteditable="true">Carro</p>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8 border-l-0 md:border-l border-gray-100 dark:border-gray-700 pb-8" contenteditable="true">
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Responsible for defining product specifications, A/B testing, user stories, and success metrics.
+                            </p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                                <li>Scope and prioritize features based on business & customer impact.</li>
+                                <li>Schedule and assign requirements to engineers, closely following up on work progress.</li>
+                                <li>Manage technical projects throughout the cycle to ensure delivery within scope, budget, and timeline.</li>
+                                <li>Conduct user testing & support upon completion of features each week.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Van Lian Hup</h3>
-      <p>Don’t hesitate to reach out with the contact information below</p>
-      <div class="social-links">
-        <a href="https://twitter.com/vanlianhup" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/vanlianhup/" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/peter_lyan/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/vanlianhup/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>Van Lian Hup</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+                <!-- Job 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-600 border-4 border-white dark:border-gray-800 shadow-sm"></div>
+                    <div class="md:flex items-start justify-between group">
+                        <div class="md:w-1/3 mb-2 md:mb-0 md:pr-8 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full mb-2" contenteditable="true">Aug 2022 - Aug 2025</span>
+                            <h3 class="text-xl font-bold text-dark dark:text-white" contenteditable="true">Senior Product Manager</h3>
+                            <p class="text-gray-500 dark:text-gray-400 font-medium" contenteditable="true">Genie Financial Services by Carro</p>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8 border-l-0 md:border-l border-gray-100 dark:border-gray-700 pb-8" contenteditable="true">
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Led product initiatives and managed technical projects to ensure successful delivery.
+                            </p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                                <li>Gathered, accurately assessed & defined needs & requirements for product features.</li>
+                                <li>Managed technical projects throughout the project management cycle.</li>
+                                <li>Conducted user testing & support upon completion of features.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+                <!-- Job 3 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-600 border-4 border-white dark:border-gray-800 shadow-sm"></div>
+                    <div class="md:flex items-start justify-between group">
+                        <div class="md:w-1/3 mb-2 md:mb-0 md:pr-8 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full mb-2" contenteditable="true">Jan 2019 - Jul 2022</span>
+                            <h3 class="text-xl font-bold text-dark dark:text-white" contenteditable="true">Tech Project Manager</h3>
+                            <p class="text-gray-500 dark:text-gray-400 font-medium" contenteditable="true">KBZ Bank (Yangon, Myanmar)</p>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8 border-l-0 md:border-l border-gray-100 dark:border-gray-700" contenteditable="true">
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Defined project scope, roles, and responsibilities. Managed service delivery including design, analysis, and testing.
+                            </p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                                <li>Managed technical projects throughout the lifecycle ensuring delivery on scope/budget/timeline.</li>
+                                <li>Prepared periodic reports for Steering and Stakeholder level decision making.</li>
+                                <li>Analyzed and resolved problems associated with technical issues and project integration.</li>
+                                <li>Collaborated with internal/external stakeholders and assessed resource allocation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
+            </div>
+        </div>
+    </section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark dark:text-white mb-4">Core Competencies</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">A mix of strategic vision and technical execution.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Strategy -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700 group">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 text-primary dark:text-blue-300 rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-dark dark:text-white">Product Strategy</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Product Development</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> System Design & Deployment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Generative AI</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> User Story & A/B Testing</li>
+                    </ul>
+                </div>
 
-  <!--Linkedin Badge Code -->
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+                <!-- Execution -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700 group">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-300 rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-dark dark:text-white">Project Management</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Agile / Scrum / Kanban</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Scope & Budget Management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Stakeholder Management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Service Delivery</li>
+                    </ul>
+                </div>
 
+                <!-- Technical/Data -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700 group">
+                    <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-300 rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-dark dark:text-white">Technical & Analytics</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Data Analysis</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> CMS (Wordpress/Drupal)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> Technical Project Mgmt</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-sm"></i> SEO & Web Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-light dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark dark:text-white mb-4">Research & Projects</h2>
+                <p class="text-gray-600 dark:text-gray-300">Featured research and key initiatives.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-cyan-400 flex items-center justify-center text-white">
+                        <i class="fas fa-book-open text-5xl opacity-80 group-hover:scale-110 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-primary dark:text-blue-300 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded uppercase tracking-wider">Publication</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark dark:text-white mb-3">Factors Affecting Information Systems Modeling Ability</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Published in the Journal of Information Technology Applications and Management (JITAM), March 2018 (Vol. 25, No. 1, PP. 33-45). Explores the key determinants in successful IS modeling.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+                    <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white">
+                        <i class="fas fa-search text-5xl opacity-80 group-hover:scale-110 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-purple-600 dark:text-purple-300 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded uppercase tracking-wider">Social Research</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark dark:text-white mb-3">Socio-Economic Impact Assessments</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Conducted baseline assessments for people with disabilities (TLMI project) and Impact Assessments on Human Development Index with UNDP during tenure at MMRD.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i class="fas fa-graduation-cap text-4xl text-gray-300 dark:text-gray-600 mb-6"></i>
+            <h2 class="text-3xl font-bold text-dark dark:text-white mb-8">Education & Certifications</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-dark dark:text-white" contenteditable="true">Master of Business Administration (MBA) in MIS</h3>
+                    <p class="text-gray-600 dark:text-gray-400" contenteditable="true">Hannam University (2015-2017) | Grade: 4.3</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-dark dark:text-white" contenteditable="true">Bachelor of Computer Technology (B.C.Tech)</h3>
+                    <p class="text-gray-600 dark:text-gray-400" contenteditable="true">University of Computer Studies, Mandalay (2006-2009)</p>
+                </div>
+                <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+                     <h3 class="text-lg font-semibold text-dark dark:text-white mb-2">Key Certifications</h3>
+                     <div class="flex flex-wrap justify-center gap-2">
+                        <span class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm cursor-pointer hover:bg-blue-200 dark:hover:bg-blue-800 transition" contenteditable="true">Professional Scrum Master (PSM)</span>
+                        <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm cursor-pointer hover:bg-green-200 dark:hover:bg-green-800 transition" contenteditable="true">Certificate in Project Management (CPM)</span>
+                        <span class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm cursor-pointer hover:bg-purple-200 dark:hover:bg-purple-800 transition" contenteditable="true">Generative AI Overview for Project Managers</span>
+                        <span class="inline-block px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm cursor-pointer hover:bg-yellow-200 dark:hover:bg-yellow-800 transition" contenteditable="true">Project/Product Management</span>
+                        <span class="inline-block px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm cursor-pointer hover:bg-red-200 dark:hover:bg-red-800 transition" contenteditable="true">Data Analytics & Visualization</span>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer/Contact -->
+    <footer id="contact" class="bg-dark dark:bg-black text-white py-16 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+            <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
+                I'm always open to discussing product design, collaboration, or opportunities.
+            </p>
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="https://www.linkedin.com/in/vanlianhup" target="_blank" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="mailto:vanlianhup@gmail.com" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                 <div class="flex items-center justify-center w-12 h-12 bg-white/10 rounded-full hover:bg-primary transition text-gray-200 text-xs" title="+66902529885">
+                    <i class="fas fa-phone"></i>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm">&copy; <script>document.write(new Date().getFullYear())</script> Van Lian Hup @ Peter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle Dark Mode (Global function)
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+
+        // Initialize Scripts when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+             // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                         // Close mobile menu on click if open
+                         if (menu && !menu.classList.contains('hidden')) {
+                             menu.classList.add('hidden');
+                         }
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
